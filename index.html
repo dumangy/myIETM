@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документация</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <div class="header-title">ИЭТР для системы автоматизации учета заказов</div>
+    <div class="header-subtitle">Руководство по эксплуатации и устранению неисправностей</div>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <div>
+        <h4>Регламентные работы</h4>
+        <div id="maintenance-tasks"></div>
+      </div>
+
+      <div>
+        <h4>Возможные неисправности</h4>
+        <div id="issues">
+          <div class="issue" id="issue-dataLoss">
+            <h5>Потеря данных о заказах</h5>
+            <p>Система не сохраняет или теряет данные о заказах, что приводит к невозможности их обработки.</p>
+            <button class="button-block" onclick="selectIssue('dataLoss')"><i class="fas fa-stethoscope"></i>Диагностика</button>
+            <div id="diagnostic-dataLoss" class="diagnostic-area">
+              <div class="question-block">
+                <h4 id="question-dataLoss"></h4>
+                <div id="answers-dataLoss"></div>
+              </div>
+              <div id="result-dataLoss" class="result-block">
+                <h4>Результат диагностики</h4>
+                <p id="diagnosis-result-dataLoss"></p>
+              </div>
+            </div>
+          </div>
+          <div class="issue" id="issue-calculationErrors">
+            <h5>Ошибки в расчетах стоимости заказов</h5>
+            <p>Неправильные расчеты стоимости заказов, связанные с ошибками в тарифах, скидках или алгоритме расчета.</p>
+            <button class="button-block" onclick="selectIssue('calculationErrors')"><i class="fas fa-stethoscope"></i>Диагностика</button>
+            <div id="diagnostic-calculationErrors" class="diagnostic-area">
+              <div class="question-block">
+                <h4 id="question-calculationErrors"></h4>
+                <div id="answers-calculationErrors"></div>
+              </div>
+              <div id="result-calculationErrors" class="result-block">
+                <h4>Результат диагностики</h4>
+                <p id="diagnosis-result-calculationErrors"></p>
+              </div>
+            </div>
+          </div>
+          <div class="issue" id="issue-processingDelay">
+            <h5>Задержка в обработке заказов</h5>
+            <p>Система обрабатывает заказы с существенной задержкой из-за перегрузки или ошибок в логике обработки.</p>
+            <button class="button-block" onclick="selectIssue('processingDelay')"><i class="fas fa-stethoscope"></i>Диагностика</button>
+            <div id="diagnostic-processingDelay" class="diagnostic-area">
+              <div class="question-block">
+                <h4 id="question-processingDelay"></h4>
+                <div id="answers-processingDelay"></div>
+              </div>
+              <div id="result-processingDelay" class="result-block">
+                <h4>Результат диагностики</h4>
+                <p id="diagnosis-result-processingDelay"></p>
+              </div>
+            </div>
+          </div>
+          <div class="issue" id="issue-integrationErrors">
+            <h5>Ошибки интеграции с внешними системами</h5>
+            <p>Проблемы с взаимодействием с CRM, бухгалтерскими программами и другими внешними системами.</p>
+            <button class="button-block" onclick="selectIssue('integrationErrors')"><i class="fas fa-stethoscope"></i>Диагностика</button>
+            <div id="diagnostic-integrationErrors" class="diagnostic-area">
+              <div class="question-block">
+                <h4 id="question-integrationErrors"></h4>
+                <div id="answers-integrationErrors"></div>
+              </div>
+              <div id="result-integrationErrors" class="result-block">
+                <h4>Результат диагностики</h4>
+                <p id="diagnosis-result-integrationErrors"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4>Справочная информация</h4>
+        <div id="information-block"></div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Система автоматизации учета заказов</p>
+      <p>При возникновении проблем обращайтесь к специалисту: ivan@prnwatch.com</p>
+    </div>
+  </footer>
+
+  <!-- Кнопка прокрутки наверх -->
+  <div class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="./script.js" async></script>
+</body>
+</html>
