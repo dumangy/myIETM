@@ -36,8 +36,8 @@
       ],
       calculationErrors: [
         { id: "q1", question: "Корректно ли настроены тарифы и скидки?", answers: [
-            { text: "Нет", next: "q3" },
-            { text: "Да", next: "q2" }
+          { text: "Да", next: "q2" },
+          { text: "Нет", next: "q3" }
         ]},
         { id: "q2", question: "Перезапуск системы решил проблему?", answers: [
             { text: "Да", result: "Диагностика завершена." },
@@ -64,16 +64,16 @@
       ],
       integrationErrors: [
         { id: "q1", question: "Доступна ли внешняя система?", answers: [
-            { text: "Нет", next: "q4" },
-            { text: "Да", next: "q2" }
+          { text: "Да", next: "q2" },
+          { text: "Нет", next: "q4" }
         ]},
         { id: "q2", question: "Корректны ли API ключи и настройки доступа?", answers: [
-            { text: "Нет", next: "q5" },
-            { text: "Да", next: "q3" }
+          { text: "Да", next: "q3" },  
+          { text: "Нет", next: "q5" }
         ]},
         { id: "q3", question: "Соответствует ли формат данных требованиям внешней системы?", answers: [
-            { text: "Нет", next: "q6" },
-            { text: "Да", result: "Проверьте наличие ошибок в коде интеграции или обратитесь к специалисту: ivan@prnwatch.com" }
+            { text: "Да", result: "Проверьте наличие ошибок в коде интеграции или обратитесь к специалисту: ivan@prnwatch.com" },
+            { text: "Нет", next: "q6" }
         ]},
         { id: "q4", question: "Восстановилась ли работа внешней системы?", answers: [
             { text: "Да", result: "Диагностика завершена." },
